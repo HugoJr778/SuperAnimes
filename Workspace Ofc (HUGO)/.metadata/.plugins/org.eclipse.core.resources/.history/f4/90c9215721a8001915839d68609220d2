@@ -1,0 +1,12 @@
+package chromeDriver;
+
+import org.openqa.selenium.WebDriver;
+
+public class PaginaBase {
+	
+	private WebDriver navegador;
+
+	public PaginaBase (WebDriver navegador) {
+		this.navegador = navegador;
+	}
+}

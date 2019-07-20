@@ -1,0 +1,31 @@
+package runnerDownload;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
+
+import chromeDriver.IniciaChromeDriver;
+import stepsPassosDownload.Login;
+
+public class RunnerDownloadSuperAnimes {
+	
+	private WebDriver navegador;
+	
+	@BeforeAll
+ 	public void setUp() {
+		navegador = IniciaChromeDriver.createChorme();
+	}
+ 	
+	@Test
+ 	public void passosDownloadSuperAnimes() {
+ 		new Login(navegador)
+ 			.indoEntrar()
+ 			.preenchendoDadosLogin("HugoJr778", "16091998");
+ 	}
+ 	
+	@AfterAll
+ 	public void finaliza() {
+ 		navegador.close();
+ 	}
+}

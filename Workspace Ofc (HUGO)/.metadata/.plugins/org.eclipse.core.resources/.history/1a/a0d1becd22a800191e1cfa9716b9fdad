@@ -1,0 +1,15 @@
+package stepsPassosDownload;
+
+import org.openqa.selenium.WebDriver;
+
+import chromeDriver.PaginaBase;
+
+public class LoginLogout extends PaginaBase {
+
+	public LoginLogout(WebDriver navegador) {
+		super(navegador);
+	}
+	
+	public L
+
+}

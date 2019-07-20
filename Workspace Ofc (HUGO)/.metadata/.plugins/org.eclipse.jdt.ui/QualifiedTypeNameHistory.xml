@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+<fullyQualifiedTypeName name="chromeDriver.IniciaChromeDriver"/>
+<fullyQualifiedTypeName name="stepsPassosDownload.Login"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="stepsPassosDownload.IndoParaPaginaDownload"/>
+<fullyQualifiedTypeName name="chromeDriver.PaginaBase"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="org.junit.jupiter.api.AfterAll"/>
+</qualifiedTypeNameHistroy>

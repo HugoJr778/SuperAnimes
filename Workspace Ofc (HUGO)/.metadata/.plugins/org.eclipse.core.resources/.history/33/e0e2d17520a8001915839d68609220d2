@@ -1,0 +1,22 @@
+package runnerDownload;
+
+import org.openqa.selenium.WebDriver;
+
+import chromeDriver.IniciaChromeDriver;
+
+public class RunnerDownloadSuperAnimes {
+	
+	private WebDriver navegador;
+	
+ 	public void setUp() {
+		navegador = IniciaChromeDriver.createChorme();
+	}
+ 	
+ 	public void passosDownloadSuperAnimes() {
+ 		
+ 	}
+ 	
+ 	public void finaliza() {
+ 		navegador.close();
+ 	}
+}

@@ -1,0 +1,28 @@
+package runnerDownload;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
+
+import chromeDriver.IniciaChromeDriver;
+
+public class RunnerDownloadSuperAnimes {
+	
+	private WebDriver navegador;
+	
+	@BeforeAll
+ 	public void setUp() {
+		navegador = IniciaChromeDriver.createChorme();
+	}
+ 	
+	@Test
+ 	public void passosDownloadSuperAnimes() {
+ 		
+ 	}
+ 	
+	@AfterAll
+ 	public void finaliza() {
+ 		navegador.close();
+ 	}
+}

@@ -1,0 +1,34 @@
+package stepsPassosDownload;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import chromeDriver.PaginaBase;
+
+public class Login extends PaginaBase {
+
+	public Login(WebDriver navegador) {
+		super(navegador);
+	}
+	
+	public Login indoEntrar() {
+		navegador.findElement(By.xpath("//div[@class='js_viewCliente']")).click();
+		
+		return this;
+	}
+	
+	public Login preenchendoDadosLogin(String user, String passoword) {
+		
+		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		navegador.findElement(By.xpath("//img[@class='menu_btn_user']")).click();
+		navegador.findElement(By.xpath("//input[@placeholder='Login ou email']")).sendKeys(user);
+		navegador.findElement(By.xpath("//input[@id='password']")).sendKeys(passoword);
+		navegador.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		navegador.findElement(By.xpath("//button[@id='bt-login']")).click();
+		navegador.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
+		
+		return this;
+	}
+}
