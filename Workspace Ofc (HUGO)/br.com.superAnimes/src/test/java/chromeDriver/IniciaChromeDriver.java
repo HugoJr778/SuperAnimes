@@ -15,7 +15,7 @@ public class IniciaChromeDriver {
 		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		navegador.manage().window().maximize();
 		navegador.get(url);
-		
+				
 		return navegador;
 	}
 }

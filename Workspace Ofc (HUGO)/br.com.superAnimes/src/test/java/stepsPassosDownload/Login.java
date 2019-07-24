@@ -1,45 +1,30 @@
 package stepsPassosDownload;
 
+import java.awt.AWTException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import chromeDriver.PaginaBase;
 
-public class Login extends PaginaBase {
-
+public class Login extends PaginaBase {	
+	
 	public Login(WebDriver navegador) {
 		super(navegador);
 	}
 	
-	public Login indoEntrar() {
-		navegador.findElement(By.xpath("//div[@class='menu_btns avatarUser']")).click();
-		navegador.findElement(By.xpath("//li[@id='myLogin']")).click();
+	public Login indoEntrar() throws InterruptedException, AWTException {
+		clickTime(By.xpath("//div[@class='menu_btns avatarUser']"), 5000);
+		click(By.xpath("//li[@id='myLogin']"));
 		
 		return this;
 	}
 	
-	public Login preenchendoDadosLogin(String user, String passoword) throws InterruptedException {
-		Thread.sleep(5000);
-		navegador.findElement(By.xpath("//input[@placeholder='Login ou email']")).sendKeys(user);
-		navegador.findElement(By.xpath("//input[@id='password']")).sendKeys(passoword);
-		navegador.findElement(By.xpath("//button[@id='bt-login']")).click();
-		
-		return this;
-	}
-	
-	public IndoParaPaginaDownload validaLogin() throws InterruptedException {
-		Thread.sleep(15000);
-		navegador.findElement(By.xpath("//div[@class='menu_btns avatarUser']")).click();
-//		String valida = navegador.findElement(By.xpath("//a[contains(text(),'Meu Perfil')]")).getText();
-//		
-//		if (valida.contains("Meu Perfil")) {
-//			System.out.println(valida);
-//			System.out.println("<LOGIN VALIDADO>");
-//		} else {
-//			System.out.println(valida);
-//			System.out.println("<LOGIN NÃO VALIDADO>");
-//			assertTrue(false);
-//		}
+	public IndoParaPaginaDownload preenchendoDadosLogin(String user, String passoword) throws InterruptedException, AWTException {
+		utils.sleep(5000);
+		senKeys(By.xpath("//input[@placeholder='Login ou email']"), user);
+		senKeys(By.xpath("//input[@id='password']"), passoword);
+		clickTime(By.xpath("//button[@id='bt-login']"), 5000);
 		
 		return new IndoParaPaginaDownload(navegador);
 	}
